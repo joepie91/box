@@ -32,6 +32,10 @@ $router->routes = array(
 			"target"	=> "modules/blog/home.php",
 			"_section"	=> "Blog"
 		),
+		"^/blog/p([0-9]+)$"					=> array(
+			"target"	=> "modules/blog/home.php",
+			"_section"	=> "Blog"
+		),
 		"^/login$"						=> array(
 			"target"	=> "modules/account/login.php",
 			"_section"	=> "Account"

@@ -23,7 +23,8 @@ class BlogPost extends CPHPDatabaseRecordClass
 		'string' => array(
 			'Title'			=> "Title",
 			'Body'			=> "Body",
-			'Slug'			=> "Slug"
+			'Slug'			=> "Slug",
+			'Thumbnail'		=> "Thumbnail"
 		),
 		'numeric' => array(
 			'Views'			=> "Views",
