@@ -10,7 +10,7 @@ event-future;								in the future
 event-past;								in the past
 event-1second-ago;							1 second ago
 event-seconds-ago;							%1$d seconds ago
-event-1minutes-ago;							1 minute ago
+event-1minute-ago;							1 minute ago
 event-minutes-ago;							%1$d minutes ago
 event-1hour-ago;							1 hour ago
 event-hours-ago;							%1$d hours ago
