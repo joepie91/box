@@ -1,0 +1,44 @@
+{
+	"database": {
+		"driver": 	"mysql",
+		"hostname": 	"localhost",
+		"username": 	"root",
+		"password": 	"",
+		"database": 	"box"
+	},
+	"locale": {
+		"path": 		"locales",
+		"extension":		"lng",
+		"default_locale": 	"english",
+		"default_timezone": 	"Europe/Amsterdam"
+	},
+	"memcache": {
+		"enabled": 	true,
+		"compressed": 	true,
+		"hostname": 	"localhost",
+		"port": 	11211
+	},
+	"class_map": {
+		"user": "User",
+		"blogpost": "BlogPost",
+		"blogcomment": "BlogComment",
+		"forumthread": "ForumThread",
+		"forumpost": "ForumPost",
+		"forumcategory": "ForumCategory",
+		"permission": "Permission"
+	},
+	"components": [
+		"router",
+		"errorhandler"
+	],
+	"smtp": {
+		"from": "boxonabudget@cryto.net",
+		"from_name": "BoxOnABudget",
+		"host": "localhost",
+		"port": 25,
+		"username": "root",
+		"password": ""
+	},
+	"debugmode": true,
+	"salt": "abcdef"
+}
