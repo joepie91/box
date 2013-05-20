@@ -21,7 +21,6 @@ class BlogComment extends CPHPDatabaseRecordClass
 	
 	public $prototype = array(
 		'string' => array(
-			'Body'			=> "Body",
 			'Name'			=> "Name",
 			'EmailAddress'		=> "EmailAddress"
 		),
@@ -36,6 +35,9 @@ class BlogComment extends CPHPDatabaseRecordClass
 		'boolean' => array(
 			"Visible"		=> "Visible",
 			"IsGuestPost"		=> "GuestPost"
+		),
+		'simplehtml' => array(
+			'Body'			=> "Body",
 		),
 		'user' => array(
 			"Author"		=> "UserId"

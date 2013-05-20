@@ -14,6 +14,18 @@
 $_APP = true;
 require("include/base.php");
 
+if(strtolower($_SERVER["REQUEST_METHOD"]) == "post")
+{
+	try
+	{
+		CSRF::VerifyToken();
+	}
+	catch (CsrfException $e)
+	{
+		die();
+	}
+}
+
 $sPageTitle = "";
 $sPageContents = "";
 
@@ -34,6 +46,14 @@ $router->routes = array(
 		),
 		"^/blog/p([0-9]+)$"					=> array(
 			"target"	=> "modules/blog/home.php",
+			"_section"	=> "Blog"
+		),
+		"^/blog/([a-z0-9-]+)$"					=> array(
+			"target"	=> "modules/blog/post.php",
+			"_section"	=> "Blog"
+		),
+		"^/blog/([a-z0-9-]+)/comment$"				=> array(
+			"target"	=> "modules/blog/comment.php",
 			"_section"	=> "Blog"
 		),
 		"^/login$"						=> array(

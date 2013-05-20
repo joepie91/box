@@ -51,7 +51,7 @@ foreach($result as $sForumPost)
 		"body"		=> filter_html(Markdown($sForumPost->uBody)),
 		"date"		=> time_ago($sForumPost->sPostedDate, $locale),
 		"date-full"	=> local_from_unix($sForumPost->sPostedDate, $locale->datetime_long),
-		"self"		=> ($sForumPost->sAuthorId == $sCurrentUser->sId),
+		"self"		=> (!empty($sCurrentUser) && $sForumPost->sAuthorId == $sCurrentUser->sId),
 		"gravatar"	=> "https://secure.gravatar.com/avatar/" . md5(strtolower(trim($sForumPost->sAuthor->sEmailAddress))) . ".jpg?d=retro&s=40",
 		"signature"	=> filter_html(Markdown($sForumPost->sAuthor->uSignature)),
 		"permalink"	=> $sForumPost->GetPermalink()

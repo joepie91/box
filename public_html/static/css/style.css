@@ -424,14 +424,14 @@ a.user
 .post .body h5 { font-size: 16px; }
 .post .body h6 { font-size: 14px; }
 
-.post .body blockquote
+.post .body blockquote, .comment blockquote
 {
 	padding: 7px 0px 7px 9px;
 	margin: 9px 0px 9px 6px;
 	border-left: 3px solid #80B380;
 }
 
-.post .body blockquote p
+.post .body blockquote p, .comment blockquote p
 {
 	margin: 0px;
 }
@@ -557,4 +557,65 @@ button.preview
 .entry .metadata .author
 {
 	margin-right: 18px;
+}
+
+.comment
+{
+	border-bottom: 1px solid #D6D6D6;
+	padding: 7px 6px 7px 65px;
+}
+
+.comment .gravatar
+{
+	float: left;
+	border: 1px solid silver;
+	padding: 1px;
+	margin: 7px 6px;
+	margin-left: -57px;
+}
+
+.comment .metadata
+{
+	padding: 6px 0px 4px 0px;
+}
+
+.comment .metadata .author
+{
+	font-weight: bold;
+}
+
+.comment .metadata .date
+{
+	color: #7D7D7D;
+	margin-left: 10px;
+	font-size: 15px;
+}
+
+.comment p
+{
+	margin: 8px 0px;
+	font-size: 15px;
+}
+
+.comments h2
+{
+	margin: 9px 0px 0px 0px;
+	font-size: 21px;
+}
+
+.comments form
+{
+	margin-top: 9px;
+}
+
+.comments textarea.body
+{
+	height: 140px;
+	margin-top: 2px;
+}
+
+.comments label
+{
+	font-size: 17px;
+	margin-top: 8px;
 }
