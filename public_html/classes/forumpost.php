@@ -61,4 +61,26 @@ class ForumPost extends CPHPDatabaseRecordClass
 		
 		return ($total_posts == 0) ? 1 : ceil(($total_posts + 1) / 30);
 	}
+	
+	public function GetThanks()
+	{
+		return ForumThanks::CreateFromQuery("SELECT * FROM forum_thanks WHERE `PostId` = :PostId", array(":PostId" => $this->sId), 20);
+	}
+	
+	public function Thank($user_id)
+	{
+		try
+		{
+			ForumThanks::CreateFromQuery("SELECT * FROM forum_thanks WHERE `PostId` = :PostId AND `UserId` = :UserId", array(
+				":PostId" => $this->sId, ":UserId" => $user_id), 0);
+		}
+		catch (NotFoundException $e)
+		{
+			$sThanks = new ForumThanks(0);
+			$sThanks->uPostId = $this->sId;
+			$sThanks->uUserId = $user_id;
+			$sThanks->uDate = time();
+			$sThanks->InsertIntoDatabase();
+		}
+	}
 }

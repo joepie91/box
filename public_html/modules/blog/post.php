@@ -58,7 +58,7 @@ foreach($result as $sComment)
 $sPageTitle = $sBlogPost->sTitle;
 $sPageContents = NewTemplater::Render("blog/post", $locale->strings, array(
 	"title"		=> $sBlogPost->sTitle,
-	"body"		=> Markdown($sBlogPost->sBody),
+	"body"		=> purify_html(Markdown($sBlogPost->sBody)),
 	"author"	=> $sBlogPost->sAuthor->sUsername,
 	"relative-date"	=> time_ago($sBlogPost->sPostedDate, $locale),
 	"thumbnail"	=> $sBlogPost->sThumbnail,

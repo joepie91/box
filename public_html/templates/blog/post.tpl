@@ -41,7 +41,7 @@
 			{%/if}
 			
 			<div class="field">
-				<textarea class="body" name="body"></textarea>
+				<textarea class="body" name="body" id="input_body"></textarea>
 			</div>
 			
 			<div class="subtext">
@@ -49,7 +49,7 @@
 			</div>
 			
 			<button class="submit" type="submit" name="submit">Post comment</button>
-			<button class="submit preview" type="submit" name="submit">Preview</button>
+			<button class="submit preview markdown-preview" data-preview-source="input_body" type="button">Preview</button>
 			<div class="clear"></div>
 		</form>
 	</div>

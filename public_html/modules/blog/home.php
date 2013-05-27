@@ -40,7 +40,7 @@ foreach($result as $sBlogPost)
 		"title"		=> $sBlogPost->sTitle,
 		"author"	=> $sBlogPost->sAuthor->sUsername,
 		"relative-date"	=> time_ago($sBlogPost->sPostedDate, $locale),
-		"teaser"	=> Markdown(cut_text($sBlogPost->sBody, 1000)),
+		"teaser"	=> purify_html(Markdown(cut_text($sBlogPost->sBody, 1000))),
 		"thumbnail"	=> $sBlogPost->sThumbnail,
 		"tags"		=> "test1, test2, test3",
 		"url"		=> "/blog/{$sBlogPost->sSlug}"

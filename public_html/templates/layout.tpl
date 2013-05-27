@@ -3,6 +3,10 @@
 	<head>
 		<title>{%?title} - BoxOnABudget {%?section}</title>
 		<link rel="stylesheet" href="/static/css/style.css">
+		<link rel="stylesheet" href="/static/fancybox/jquery.fancybox.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="/static/fancybox/jquery.fancybox.pack.js"></script>
+		<script src="/static/js/script.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">

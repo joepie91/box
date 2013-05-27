@@ -48,12 +48,12 @@ foreach($result as $sForumPost)
 		"id"		=> $sForumPost->sId,
 		"author"	=> $sForumPost->sAuthor->sUsername,
 		"author-status"	=> $sForumPost->sAuthor->sIsBanned ? "Banned" : "Member",
-		"body"		=> filter_html(Markdown($sForumPost->uBody)),
+		"body"		=> purify_html(Markdown($sForumPost->uBody)),
 		"date"		=> time_ago($sForumPost->sPostedDate, $locale),
 		"date-full"	=> local_from_unix($sForumPost->sPostedDate, $locale->datetime_long),
 		"self"		=> (!empty($sCurrentUser) && $sForumPost->sAuthorId == $sCurrentUser->sId),
 		"gravatar"	=> "https://secure.gravatar.com/avatar/" . md5(strtolower(trim($sForumPost->sAuthor->sEmailAddress))) . ".jpg?d=retro&s=40",
-		"signature"	=> filter_html(Markdown($sForumPost->sAuthor->uSignature)),
+		"signature"	=> purify_html(Markdown($sForumPost->sAuthor->uSignature)),
 		"permalink"	=> $sForumPost->GetPermalink()
 	);
 }

@@ -85,6 +85,11 @@ $router->routes = array(
 			"target"	=> "modules/forums/permalink.php",
 			"_section"	=> "Forums"
 		),
+		"^/forums/thank/([0-9]+)$"				=> array(
+			"methods"	=> "post",
+			"target"	=> "modules/forums/thank.php",
+			"_section"	=> "None"
+		),
 		"^/forums/discussion/([0-9]+)/[a-z0-9-]+(/p([0-9]))?$"	=> array(
 			"methods"	=> "get",
 			"target"	=> "modules/forums/thread.php",
@@ -134,10 +139,13 @@ $router->routes = array(
 
 $router->RouteRequest();
 
-echo(NewTemplater::Render("layout", $locale->strings, array(
-	"title"		=> $sPageTitle,
-	"section"	=> $router->uVariables["section"],
-	"contents"	=> $sPageContents,
-	"logout-key"	=> "test"
-)));
+if($router->uVariables["section"] != "None")
+{
+	echo(NewTemplater::Render("layout", $locale->strings, array(
+		"title"		=> $sPageTitle,
+		"section"	=> $router->uVariables["section"],
+		"contents"	=> $sPageContents,
+		"logout-key"	=> "test"
+	)));
+}
 

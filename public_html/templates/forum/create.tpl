@@ -17,13 +17,13 @@
 	</div>
 	
 	<div class="field">
-		<textarea name="body"></textarea>
+		<textarea name="body" id="input_body"></textarea>
 	</div>
 	
 	<div class="field">
 		<div class="subtext">You can use <a href="http://static.squarespace.com/static/50060af484ae2a1f638413cb/5025cecce4b0922760c3c438/5025cecce4b0922760c3c43a/1304275182573/">Markdown</a> and <a href="http://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a>.</div>
 		<button type="submit" class="post">Create thread</button>
-		<button type="button" class="submit preview">Preview</button>
+		<button type="button" class="submit preview markdown-preview" data-preview-source="input_body">Preview</button>
 		<div class="clear"></div>
 	</div>
 </form>
