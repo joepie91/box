@@ -31,6 +31,12 @@
 		"router",
 		"errorhandler"
 	],
+	"libraries": {
+		"htmlpurifier": {
+			"path": "lib/htmlpurifier/HTMLPurifier.auto.php",
+			"doctype": "HTML 4.01 Transitional"
+		}
+	},
 	"smtp": {
 		"from": "boxonabudget@cryto.net",
 		"from_name": "BoxOnABudget",
