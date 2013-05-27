@@ -1,0 +1,120 @@
+body
+{
+	background-color: #E6FFE6;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+h1
+{
+	background-color: #24431F;
+	color: white;
+	font-size: 19px;
+	padding: 7px 9px;
+}
+
+p
+{
+	padding: 0px 5px;
+}
+
+blockquote
+{
+	border: 1px solid #609657;
+	padding: 5px 6px;
+	margin: 5px 0px;
+	font-size: 12px;
+	color: #585858;
+	max-height: 80px;
+	overflow: auto;
+}
+
+blockquote p
+{
+	margin: 6px 0px;
+}
+
+blockquote blockquote
+{
+	border: 0px;
+	padding: 5px 0px 5px 5px;
+	margin: 5px 0px 5px 4px;
+	border-left: 3px solid #80B380;
+}
+
+blockquote blockquote p
+{
+	margin: 0px;
+}
+
+form .field
+{
+	margin-bottom: 7px;
+	padding-left: 6px;
+}
+
+label, input, textarea, button
+{
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+label, input, select
+{
+	float: left;
+}
+
+label
+{
+	width: 15%;
+	font-size: 15px;
+	color: #397739;
+	font-weight: bold;
+	margin-top: 6px;
+}
+
+input, textarea, select
+{
+	border: 1px solid #397739;
+	background-color: white;
+	border-radius: 1px;
+	margin-top: 5px;
+}
+
+input, select
+{
+	width: 66%;
+	font-size: 15px;
+	padding: 1px 3px;
+}
+
+button
+{
+	font-size: 14px;
+	font-weight: bold;
+	background: #f5fff2; /* Old browsers */
+	background: -moz-linear-gradient(top, #f5fff2 34%, #e9f7d7 74%, #ddefc9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(34%,#f5fff2), color-stop(74%,#e9f7d7), color-stop(100%,#ddefc9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f5fff2 34%,#e9f7d7 74%,#ddefc9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f5fff2 34%,#e9f7d7 74%,#ddefc9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f5fff2 34%,#e9f7d7 74%,#ddefc9 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f5fff2 34%,#e9f7d7 74%,#ddefc9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fff2', endColorstr='#ddefc9',GradientType=0 ); /* IE6-9 */
+	color: #2E4F2B;
+	border: 1px solid silver;
+	border-radius: 4px;
+	padding: 4px 6px;
+	box-shadow: 0px 0px 4px 0px #c0dbba;
+	-webkit-box-shadow: 0px 0px 4px 0px #c0dbba;
+	-moz-box-shadow: 0px 0px 4px 0px #c0dbba;
+	-o-box-shadow: 0px 0px 4px 0px #c0dbba;
+	-ms-box-shadow: 0px 0px 4px 0px #c0dbba;
+	text-shadow: 1px 1px 0px #bbe6a6;
+	-webkit-text-shadow: 1px 1px 0px #bbe6a6;
+	-moz-text-shadow: 1px 1px 0px #bbe6a6;
+	-o-text-shadow: 1px 1px 0px #bbe6a6;
+	-ms-text-shadow: 1px 1px 0px #bbe6a6;
+	width: 15%;
+	float: right;
+}

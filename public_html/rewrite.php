@@ -88,6 +88,15 @@ $router->routes = array(
 		"^/forums/thank/([0-9]+)$"				=> array(
 			"methods"	=> "post",
 			"target"	=> "modules/forums/thank.php",
+			"authenticator"	=> "authenticators/user.php",
+			"auth_error"	=> "modules/account/login.php",
+			"_section"	=> "None"
+		),
+		"^/forums/flag/([0-9]+)$"				=> array(
+			"methods"	=> array("get", "post"),
+			"target"	=> "modules/forums/flag.php",
+			"authenticator"	=> "authenticators/user.php",
+			"auth_error"	=> "modules/account/login.php",
 			"_section"	=> "None"
 		),
 		"^/forums/discussion/([0-9]+)/[a-z0-9-]+(/p([0-9]))?$"	=> array(

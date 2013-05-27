@@ -16,8 +16,10 @@
 						<span class="author">{%?post[author]}</span>
 						<form style="display: none;" id="csrf_form_{%?post[id]}"></form>
 						<a class="date" href="{%?post[permalink]}">{%?post[date]}</a>
-						<a class="thanks" href="#" target="_blank" data-id="{%?post[id]}">Thanks</a>
-						<a class="flag" href="/forums/flag/{%?post[id]}" target="_blank" data-id="{%?post[id]}">Flag</a>
+						{%if logged-in == true}
+							<a class="thanks" href="#" target="_blank" data-id="{%?post[id]}">Thanks</a>
+							<a class="flag" href="/forums/flag/{%?post[id]}" target="_blank" data-id="{%?post[id]}">Flag</a>
+						{%/if}
 					</div>
 					<div class="status">{%?post[author-status]}</div>
 				</div>

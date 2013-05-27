@@ -83,4 +83,14 @@ class ForumPost extends CPHPDatabaseRecordClass
 			$sThanks->InsertIntoDatabase();
 		}
 	}
+	
+	public function Flag($user_id, $reason)
+	{
+		$sFlag = new ForumFlag(0);
+		$sFlag->uPostId = $this->sId;
+		$sFlag->uUserId = $user_id;
+		$sFlag->uFlagDate = time();
+		$sFlag->uReason = $reason;
+		$sFlag->InsertIntoDatabase();
+	}
 }

@@ -43,11 +43,10 @@ $(function(){
 	
 	$('a.flag').click(function(event){
 		$.fancybox.open([{
-			href: "/forums/flag/" + $(this).data("id"),
-			title: "Report a post"
+			href: "/forums/flag/" + $(this).data("id")
 		}], 
 		{
-			padding: 24,
+			padding: 4,
 			autoSize: false,
 			width: 550,
 			height: 400,
